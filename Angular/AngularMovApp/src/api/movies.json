@@ -1,0 +1,31 @@
+[{"movieId":1,   
+            "mname":"Avengers-Captain America",
+            "mgenre": "Scifi",
+            "rating": 4.5165,
+            "imageUrl":".\\assets\\taj.jpg"
+    },
+        {"movieId":2,
+            "mname":"IronMan-3",
+            "mgenre": "Scifi",
+            "rating": 5.297,
+            "imageUrl":".\\assets\\travel_2.jpg"
+    },
+        {"movieId":3,
+            "mname":"Antman",
+            "mgenre": "Comedy",
+            "rating": 6.277,
+            "imageUrl":".\\assets\\champion-ant-man.jpg"
+    },
+        {"movieId":4,
+            "mname":"Spiderman",
+            "mgenre": "Adventure",
+            "rating": 8.674,
+            "imageUrl":".\\assets\\spider man.jpg"
+    },
+        {"movieId":5,
+            "mname":"Ted",
+            "mgenre": "Comedy",
+            "rating": 10,
+            "imageUrl":".\\assets\\ted.jpg"
+    }
+]

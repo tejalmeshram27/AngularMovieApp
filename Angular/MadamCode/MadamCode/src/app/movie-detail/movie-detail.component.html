@@ -1,0 +1,36 @@
+<div class="card shadow" style="margin-left:200px;margin-top:20px;margin-bottom:30px;width:60%;align-self:center;"
+    *ngIf='movie'>
+    <div class="card-header heading">
+        {{movie.movieName}}
+    </div>
+    <img class="card-img-top img-fluid" [src]="movie.movieImg">
+    <div class="card-body">
+        <h4 class="card-title">Starring..{{movie.movieStar}} </h4>
+        <p class="card-text">If you are interested in the genre of {{movie.movieGenre}}
+            Watch this movie with the rating of {{movie.movieRating}}
+        </p>
+    </div> 
+    <div style="display: inline;" align="center">
+        <div style="float: left;">
+            <button class="btn btn-success" style="padding:15px 32px;text-align:center;margin-right:10px;text-decoration: none;"><i
+                    class="fa fa-play-circle fa-lg"></i> Play Movie</button>
+
+        </div>
+        <div style="float: left;">
+            <button class="btn btn-primary" style="padding:15px 32px;text-align: center;text-decoration: none;"><i
+                    class="fa fa-play-circle fa-lg"></i> Play Trailer</button>
+
+        </div>
+    </div>
+
+<div class="card-footer">
+    <button class="btn btn-outline-success"
+            style='width:80px'
+            (click)="onBack()">
+            <i class='fa fa-chevron-left'></i>
+            Back
+        </button>
+</div>
+</div>
+
+    

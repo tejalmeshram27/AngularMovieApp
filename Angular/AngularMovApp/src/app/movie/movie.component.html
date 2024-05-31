@@ -1,0 +1,54 @@
+<!-- <h1>Welcome to {{header}} {{45*36}}</h1> -->
+<!-- <span>{{header}} app is running!</span> -->
+
+<p class="display-3">From Movie Component</p>
+<div class="card">
+    <div class="card-header">
+        {{header}}
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">  
+                <h4>
+                    Search Movie:
+                </h4> 
+            </div>                  
+        </div>
+        <!-- <button [onClick]="togglePic">Show Image</button> -->
+        <input type="text" [(ngModel)] = "searchTxt">
+        <div>{{searchTxt}}</div>
+        <br><br>
+        <button>Show Image</button>
+        <div class="table-responsive">
+            <table class="table" *ngIf="movies.length">
+                <tr>
+                    <th>
+                        Movie Image
+                    </th>
+                    <th>
+                        Movie Name
+                    </th>
+                    <th>
+                        Movie Genre
+                    </th>
+                    <th>
+                        Movie Rating
+                    </th>
+                </tr>
+                <tr *ngFor="let mov of searchedMovie">
+                    <!-- <td><img *ngIf="showImage" src="{{mov.imageUrl}}" [width]="imageWidth" [height]="imageHeight" [style.borderRadius.px]="imageBorderRadius" alt="">{{mov.imageUrl}}</td> -->
+                    <td><img [src]="mov.imageUrl" [width]="imageWidth" [height]="imageHeight" [style.borderRadius.px]="imageBorderRadius" alt=""></td>
+                    <!-- <td>{{mov.imageUrl}}</td> -->
+                    <td> {{mov.mname | uppercase | convertToChar: '-' }} </td>
+                    <td> {{mov.mgenre}} </td>
+                    <!-- <td> {{mov.rating | currency:'INR':'symbol':'1.2-3'}} </td> -->
+                    <!-- <td>  -->
+                        <!-- <mov-star [rating] = "mov.rating"
+                            (ratingClicked)="onRatingClicked($event)" -->
+                        <!-- <mov-star></mov-star>  -->
+                    <!-- </td> -->
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
